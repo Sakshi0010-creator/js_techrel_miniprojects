@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choice</title>
+    <style>
+        .buttons {
+            margin-top: 20px;
+            justify-content: space-between;
+            justify-content: center;
+
+            color: antiquewhite;
+            display: flex;
+            padding: 20px;
+            
+        }
+
+        .b1 {
+           background-color: antiquewhite;
+    color: brown;
+    justify-content: space-around; }   
+
+        .b2 {
+            background-color: green;
+            color: white;
+
+            justify-content: space-between;
+        }
+
+        .b3 {
+            background-color: yellow;
+            color: white;
+
+            justify-content: space-between;
+        }
+        .b5{
+            background-color: blue;
+            color: antiquewhite;
+
+        }
+        .b6{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="main box">
+            <div class="text">
+                <input type="text" id="input">
+            </div>
+            <div class="btns">
+                <select name="" id="">
+                    <option value="">---select color----</option>
+                    <option value="background">background-color</option>
+                    <option value="color"> text color</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <div class="b1"> <button onclick="selectedtext(innerText)">Red</button></div>
+                <div class="b2"> <button onclick="selectedtext(innerText)">Green</button></div>
+                <div class="b3"> <button onclick="selectedtext(innerText)">Yellow</button> </div>
+                <div class="b4"> <button onclick="selectedtext(innerText)">Blue</button> </div>
+                <div class="b5"> <button onclick="selectedtext(innerText)">Pink</button> </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        function selectedtext(btnTxt) {
+
+            let selectTag = document.querySelector('select').value
+            console.log(selectTag);
+            if (selectTag == 'color') {
+                document.querySelector('#input').style.color = btnTxt
+            } else {
+                document.querySelector('#input').style.background = btnTxt
+            }
+
+        }
+    </script>
+</body>
+
+</html>
